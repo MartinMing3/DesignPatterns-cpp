@@ -1,0 +1,19 @@
+@startuml
+enum CAR_TYPE{
+       BENZ_CAR,
+       BMW_CAR,
+       AUDI_CAR
+}
+
+interface Factory{
+    + Create()
+}
+interface Product{
+    + Name()
+}
+Factory <|-- ConcreteFactory
+Factory -right-> Product
+Product <|-down- ConcreteAudiCar
+Product <|-down- ConcreteBenzCar
+Product <|-down- ConreteBwmCar
+@enduml
