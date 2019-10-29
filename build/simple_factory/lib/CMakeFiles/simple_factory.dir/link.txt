@@ -1,2 +1,0 @@
-/usr/bin/ar.exe qc ../../arc/libsimple_factory.a  CMakeFiles/simple_factory.dir/src/ConcreteAudiCar.cpp.o CMakeFiles/simple_factory.dir/src/ConcreteBenzCar.cpp.o CMakeFiles/simple_factory.dir/src/ConreteBmwCar.cpp.o CMakeFiles/simple_factory.dir/src/ConcreteFactory.cpp.o
-/usr/bin/ranlib.exe ../../arc/libsimple_factory.a
