@@ -1,6 +1,5 @@
 #pragma once
 #include <memory>
-
 #include "simple_factory/Factory.hpp"
 
 namespace design_patterns

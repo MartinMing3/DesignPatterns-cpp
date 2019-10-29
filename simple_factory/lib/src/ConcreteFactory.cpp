@@ -1,5 +1,4 @@
 #include "simple_factory/ConcreteFactory.hpp"
-
 #include "simple_factory/Product.hpp"
 #include "simple_factory/ConcreteAudiCar.hpp"
 #include "simple_factory/ConcreteBenzCar.hpp"
@@ -14,13 +13,13 @@ std::unique_ptr<Product> ConcreteFactory::create(CAR_TYPE type)
     std::unique_ptr<Product> car = nullptr;
     switch(type) 
     {
-        case CAR_TYPE::BENZ_CAR:
+        case CAR_TYPE::BENZ:
             car = std::make_unique<ConcreteBenzCar>();
             break;
-        case CAR_TYPE::BMW_CAR:
+        case CAR_TYPE::BMW:
             car = std::make_unique<ConreteBmwCar>();
             break;
-        case CAR_TYPE::AUDI_CAR:
+        case CAR_TYPE::AUDI:
             car = std::make_unique<ConcreteAudiCar>();
             break;
         default:
