@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import -Wl,--no-undefined CMakeFiles/simple_factory_example.dir/main.cpp.o  -o ../../bin/simple_factory_example.exe -Wl,--out-implib,../../arc/libsimple_factory_example.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ../../arc/libsimple_factory.a 

@@ -11,16 +11,10 @@ namespace simple_factory
 {
 class Product;
 
+enum class CAR_TYPE { BENZ_CAR, BMW_CAR, AUDI_CAR };
 class Factory
 {
     public:
-        enum CAR_TYPE
-        {
-            BENZ_CAR,
-            BMW_CAR,
-            AUDI_CAR
-        };
-
         virtual ~Factory() = default;
         virtual std::unique_ptr<Product> create(CAR_TYPE) = 0;
 };

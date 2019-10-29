@@ -11,13 +11,13 @@ int main()
 {
     ConcreteFactory simpleFactory;
 
-    auto pCar = simpleFactory.create(Factory::AUDI_CAR);
+    auto pCar = simpleFactory.create(CAR_TYPE::AUDI_CAR);
     cout << pCar->Name() << endl;
 
-    pCar = simpleFactory.create(Factory::BMW_CAR);
+    pCar = simpleFactory.create(CAR_TYPE::BMW_CAR);
     cout << pCar->Name() << endl;
 
-    pCar = simpleFactory.create(Factory::BENZ_CAR);
+    pCar = simpleFactory.create(CAR_TYPE::BENZ_CAR);
     cout << pCar->Name() << endl;
 
     getchar();
