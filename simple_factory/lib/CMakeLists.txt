@@ -3,7 +3,7 @@ set(MODULE_NAME simple_factory)
 set(PUBLIC_HEADERS
     include/${MODULE_NAME}/ConcreteAudiCar.hpp
     include/${MODULE_NAME}/ConcreteBenzCar.hpp
-    include/${MODULE_NAME}/ConreteBmwCar.hpp
+    include/${MODULE_NAME}/ConcreteBmwCar.hpp
     include/${MODULE_NAME}/ConcreteFactory.hpp
     include/${MODULE_NAME}/Factory.hpp
     include/${MODULE_NAME}/Product.hpp
@@ -12,7 +12,7 @@ set(PUBLIC_HEADERS
 set(INTERNAL_FILES
     src/ConcreteAudiCar.cpp
     src/ConcreteBenzCar.cpp
-    src/ConreteBmwCar.cpp
+    src/ConcreteBmwCar.cpp
     src/ConcreteFactory.cpp
 )
 
