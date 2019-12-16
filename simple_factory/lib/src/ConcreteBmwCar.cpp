@@ -6,7 +6,7 @@ namespace simple_factory
 {
 std::string ConreteBmwCar::Name() 
 {
-        return "Bmw Car";
+    return "Bmw Car";
 }
 
 } // namespace simple_factory

@@ -1,7 +1,5 @@
 #pragma once
-
 #include <memory>
-#include "simple_factory/Product.hpp"
 
 namespace design_patterns
 {
@@ -9,12 +7,12 @@ namespace simple_factory
 {
 class Product;
 
-enum class CAR_TYPE {BENZ, BMW, AUDI};
-class Factory
+enum class PRODUCT_TYPE {BENZ, BMW, AUDI};
+class Factory final
 {
-protected:
-    virtual ~Factory() = default;
-    virtual std::unique_ptr<Product> create(CAR_TYPE) = 0;
+public:
+    ~Factory() = default;
+    static std::unique_ptr<Product> create(PRODUCT_TYPE);
 };
 
 } // namespace simple_factory

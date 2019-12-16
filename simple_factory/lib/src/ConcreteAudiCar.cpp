@@ -6,7 +6,7 @@ namespace simple_factory
 {
 std::string ConcreteAudiCar::Name() 
 {
-        return "Audi Car";
+    return "Audi Car";
 }
 
 } // namespace simple_factory

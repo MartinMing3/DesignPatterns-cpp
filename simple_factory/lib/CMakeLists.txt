@@ -4,7 +4,6 @@ set(PUBLIC_HEADERS
     include/${MODULE_NAME}/ConcreteAudiCar.hpp
     include/${MODULE_NAME}/ConcreteBenzCar.hpp
     include/${MODULE_NAME}/ConcreteBmwCar.hpp
-    include/${MODULE_NAME}/ConcreteFactory.hpp
     include/${MODULE_NAME}/Factory.hpp
     include/${MODULE_NAME}/Product.hpp
     )
@@ -13,7 +12,7 @@ set(INTERNAL_FILES
     src/ConcreteAudiCar.cpp
     src/ConcreteBenzCar.cpp
     src/ConcreteBmwCar.cpp
-    src/ConcreteFactory.cpp
+    src/Factory.cpp
 )
 
 add_library(${MODULE_NAME} ${INTERNAL_FILES} ${PUBLIC_HEADERS})
