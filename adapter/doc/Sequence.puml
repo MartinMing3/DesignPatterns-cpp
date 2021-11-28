@@ -1,0 +1,21 @@
+@startuml
+title Simple Factory
+participant Client #Lime
+participant Factory #Cyan
+participant ConcreteProductionA #Magenta
+participant ConcreteProductionB #Magenta
+Client -> Factory
+
+activate Factory
+create ConcreteProductionA
+Factory  --> ConcreteProductionA  : Create(enum)
+activate ConcreteProductionA
+ConcreteProductionA -> ConcreteProductionA :Operate(string)
+deactivate ConcreteProductionA
+
+create ConcreteProductionB
+Factory  --> ConcreteProductionB  : Create(enum)
+activate ConcreteProductionB
+ConcreteProductionB -> ConcreteProductionB :Operate(string)
+deactivate ConcreteProductionB
+@enduml

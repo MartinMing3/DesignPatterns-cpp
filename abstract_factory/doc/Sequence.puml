@@ -1,0 +1,25 @@
+@startuml
+title Abstract Factory
+
+activate ConcreteFactory1
+create ProductA1
+ConcreteFactory1 -> ProductA1: CreateProductA()
+activate  ProductA1
+ProductA1 -> ProductA1:OperationA()
+create ProductB1
+ConcreteFactory1 -> ProductB1: CreateProductB()
+activate  ProductB1
+ProductB1 -> ProductB1:OperationB()
+
+activate ConcreteFactory2
+create ProductA2
+ConcreteFactory2 -> ProductA2: CreateProductA()
+activate  ProductA2
+ProductA2 -> ProductA2:OperationA()
+deactivate ProductA2
+create ProductB2
+ConcreteFactory2 -> ProductB2: CreateProductB()
+activate  ProductB2
+ProductB2 -> ProductB2:OperationB()
+
+@enduml抽象工厂模式

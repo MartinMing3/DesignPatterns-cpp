@@ -1,4 +1,4 @@
-set(MODULE_NAME simple_facotry_example)
+set(MODULE_NAME abstract_factory_example)
 
 add_executable(${MODULE_NAME}
     main.cpp
@@ -7,7 +7,7 @@ add_executable(${MODULE_NAME}
 target_link_libraries(${MODULE_NAME}
     PRIVATE
         uml::common
-        uml::simple_factory
+        uml::abstract_factory
 )
 
 install(

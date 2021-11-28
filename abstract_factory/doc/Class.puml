@@ -1,0 +1,50 @@
+@startuml
+title Abstract Factory
+note  top of  AbstractFactory
+依赖注入(实现/继承关系)工厂模式
+end note 
+
+abstract AbstractFactory
+{
+    +AbstractProductA* CreateProductA()
+    +AbstractProductB* CreateProductB() 
+}
+class ConcreteFactory1
+{
+    +AbstractProductA* CreateProductA()
+    +AbstractProductB* CreateProductB() 
+}
+class ConcreteFactory2
+{
+    +AbstractProductA* CreateProductA()
+    +AbstractProductB* CreateProductB() 
+}
+ConcreteFactory1 -up-|>AbstractFactory
+ConcreteFactory2 -up-|>AbstractFactory
+AbstractFactory .right.>AbstractProductA : CreateProductA()
+AbstractFactory .right.>AbstractProductB : CreateProductB()
+
+abstract AbstractProductA{
+    +OperationA()
+}
+class ProductA1{
+    +OperationA()
+}
+class ProductA2{
+    +OperationA()
+}
+ProductA1 -up-|>AbstractProductA
+ProductA2 -up-|>AbstractProductA
+
+abstract AbstractProductB{
+     +OperationB()
+}
+class ProductB1{
+    +OperationB()
+}
+class ProductB2{
+    +OperationB()
+}
+ProductB1 -up-|> AbstractProductB
+ProductB2 -up-|> AbstractProductB
+@enduml

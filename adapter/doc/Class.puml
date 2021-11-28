@@ -1,0 +1,22 @@
+@startuml
+title Adapater
+
+class Target{
+    +Request()
+} 
+
+class Adapater{
+	- Adapatee
+	+Request()
+}
+note left of Adapater
+Adapatee::(SpecificRequest())
+end note
+class Adapatee{
+	+SpecificRequest()
+}
+
+Client -right->Target
+Adapater -up-|> Target
+Adapater o-right-> Adapatee : Request()
+@enduml

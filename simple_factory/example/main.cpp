@@ -1,20 +1,24 @@
-#include <iostream>
+
+#include "common/CommonHeader.hpp"
 
 #include "simple_factory/Factory.hpp"
-#include "simple_factory/Product.hpp"
+#include "simple_factory/Production.hpp"
 
 int main()
 {
-    using namespace design_patterns::simple_factory;
+	auto api = Factory::Create(PRODUCT::A);
+	string str{"testA"};
 
-    auto pCar = Factory::create(PRODUCT_TYPE::AUDI);
-    std::cout << pCar->Name() << std::endl;
+	api->Operate(str);
 
-    pCar = Factory::create(PRODUCT_TYPE::BMW);
-    std::cout << pCar->Name() << std::endl;
+	api.reset();
+	api = Factory::Create(PRODUCT::B);
+	assert( nullptr != api );
+	str = "testB";
+	api->Operate(str);
 
-    pCar = Factory::create(PRODUCT_TYPE::BENZ);
-    std::cout << pCar->Name() << std::endl;
-
-    return 0;
+	api.reset();
+	api = Factory::Create(PRODUCT::C);
+	assert( nullptr == api );
+	return 0;
 }

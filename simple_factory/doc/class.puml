@@ -1,19 +1,25 @@
 @startuml
-enum CAR_TYPE{
-       BENZ_CAR,
-       BMW_CAR,
-       AUDI_CAR
+title Simple Factory
+note  top of  Factory
+依赖注入(实现/继承关系)工厂模式
+end note
+
+class Factory{
+    +Create(enum)
+} 
+
+interface Production{
+	+Operate(string)
+}
+class ConcreteProductionA{
+	+Operate(string)
+}
+class ConcreteProductionB{
+	+Operate(string)
 }
 
-interface Factory{
-    + Create()
-}
-interface Product{
-    + Name()
-}
-Factory <|-- ConcreteFactory
-Factory -right-> Product
-Product <|-down- ConcreteAudiCar
-Product <|-down- ConcreteBenzCar
-Product <|-down- ConreteBwmCar
+Client -right->Factory
+Factory .right.> Production : Create(enum)
+Production  <|-down- ConcreteProductionA
+Production  <|-down- ConcreteProductionB
 @enduml
